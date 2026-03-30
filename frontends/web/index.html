@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polymarket AI Platform - Web</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Polymarket AI-Assisted Platform</h1>
+      <p>Deterministic logic and risk controls are authoritative. AI is advisory.</p>
+
+      <div class="toolbar">
+        <label for="apiBase">API Base</label>
+        <input id="apiBase" type="text" value="http://localhost:8000" />
+        <button id="saveApiBase">Save</button>
+        <button id="refreshBtn">Refresh Markets</button>
+      </div>
+
+      <div class="toolbar">
+        <span id="statusPill" class="status-pill">Idle</span>
+      </div>
+
+      <h2>Markets (hard filtered)</h2>
+      <table id="marketsTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Question</th>
+            <th>Volume 24h</th>
+            <th>Liquidity</th>
+            <th>Spread bps</th>
+            <th>AI score</th>
+            <th>AI reasoning</th>
+          </tr>
+        </thead>
+        <tbody id="marketsBody"></tbody>
+      </table>
+
+      <h2>Parameter Suggestions (AI advisory)</h2>
+      <table id="suggestionsTable">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Change</th>
+            <th>Rationale</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
