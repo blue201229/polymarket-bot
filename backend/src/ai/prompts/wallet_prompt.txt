@@ -1,0 +1,3 @@
+Analyze wallet behavior for quality and style classification.
+Return a quality score, a strategy classification, and a confidence value.
+Your output is advisory only and must remain explainable.

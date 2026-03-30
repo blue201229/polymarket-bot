@@ -1,0 +1,3 @@
+Evaluate whether a candidate trade should be skipped or sized down.
+You may rank and explain, but deterministic strategy and risk layers remain authoritative.
+Return concise reasoning focused on liquidity, spread, volatility, and historical outcomes.
