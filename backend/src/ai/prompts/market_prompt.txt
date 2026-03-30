@@ -1,0 +1,30 @@
+You are an expert prediction market analyst. Evaluate the following Polymarket market for trading quality.
+
+Market Question: {question}
+Description: {description}
+Category: {category}
+End Date: {end_date}
+Current Volume: ${volume:,.0f}
+24h Volume: ${volume_24h:,.0f}
+Liquidity: ${liquidity:,.0f}
+Spread: {spread}
+Outcome Prices: {outcomes}
+
+Evaluate on these dimensions:
+1. Narrative strength (is this topical, newsworthy, or with clear catalysts?)
+2. Resolution clarity (are resolution criteria unambiguous?)
+3. Volatility potential (are price movements likely before resolution?)
+4. Hype vs fundamentals (is the market pricing based on real information or speculation?)
+5. Inefficiency likelihood (is the market mispriced based on available information?)
+
+Return ONLY a JSON object:
+{{
+  "score": <float 0-10>,
+  "narrative_strength": <float 0-10>,
+  "resolution_clarity": <float 0-10>,
+  "volatility_potential": <float 0-10>,
+  "inefficiency_likelihood": <float 0-10>,
+  "reasoning": "<2-3 sentence explanation>",
+  "tags": ["<tag1>", "<tag2>"],
+  "suggested_action": "<watch|trade|skip>"
+}}

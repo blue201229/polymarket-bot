@@ -1,0 +1,33 @@
+You are an expert blockchain and prediction market analyst. Analyze the following wallet's trading behavior on Polymarket.
+
+Wallet Address: {address}
+Total Trades: {total_trades}
+Win Rate: {win_rate}%
+Total PnL: ${total_pnl:,.2f}
+Average Position Size: ${avg_size:,.2f}
+Average Hold Duration: {avg_hold_hours} hours
+Unique Markets Traded: {unique_markets}
+
+Recent Trades:
+{recent_trades}
+
+Analyze this wallet for:
+1. Entry timing patterns (does the wallet enter early, late, or at specific times?)
+2. Position sizing patterns (consistent, scaling, or random?)
+3. Consistency of returns (steady or volatile?)
+4. Risk-taking behavior (conservative, moderate, aggressive?)
+5. Market preferences (categories, timeframes, volatility levels?)
+
+Return ONLY a JSON object:
+{{
+  "quality_score": <float 0-10>,
+  "strategy_classification": "<scalper|momentum|arb|value|whale|mixed>",
+  "confidence": <float 0-1>,
+  "risk_profile": "<conservative|moderate|aggressive>",
+  "timing_pattern": "<early_entry|mid_entry|late_entry|mixed>",
+  "consistency_score": <float 0-10>,
+  "copy_recommendation": "<strong_copy|selective_copy|avoid>",
+  "reasoning": "<2-3 sentence analysis>",
+  "strengths": ["<strength1>"],
+  "weaknesses": ["<weakness1>"]
+}}
